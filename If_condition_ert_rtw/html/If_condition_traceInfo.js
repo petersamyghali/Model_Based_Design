@@ -1,0 +1,37 @@
+function RTW_rtwnameSIDMap() {
+	this.rtwnameHashMap = new Array();
+	this.sidHashMap = new Array();
+	this.rtwnameHashMap["<Root>"] = {sid: "If_condition"};
+	this.sidHashMap["If_condition"] = {rtwname: "<Root>"};
+	this.rtwnameHashMap["<S1>"] = {sid: "If_condition:2"};
+	this.sidHashMap["If_condition:2"] = {rtwname: "<S1>"};
+	this.rtwnameHashMap["<S2>"] = {sid: "If_condition:6"};
+	this.sidHashMap["If_condition:6"] = {rtwname: "<S2>"};
+	this.rtwnameHashMap["<Root>/Input"] = {sid: "If_condition:12"};
+	this.sidHashMap["If_condition:12"] = {rtwname: "<Root>/Input"};
+	this.rtwnameHashMap["<Root>/If"] = {sid: "If_condition:1"};
+	this.sidHashMap["If_condition:1"] = {rtwname: "<Root>/If"};
+	this.rtwnameHashMap["<Root>/If Action Subsystem"] = {sid: "If_condition:2"};
+	this.sidHashMap["If_condition:2"] = {rtwname: "<Root>/If Action Subsystem"};
+	this.rtwnameHashMap["<Root>/If Action Subsystem1"] = {sid: "If_condition:6"};
+	this.sidHashMap["If_condition:6"] = {rtwname: "<Root>/If Action Subsystem1"};
+	this.rtwnameHashMap["<Root>/Merge"] = {sid: "If_condition:13"};
+	this.sidHashMap["If_condition:13"] = {rtwname: "<Root>/Merge"};
+	this.rtwnameHashMap["<Root>/Out1"] = {sid: "If_condition:14"};
+	this.sidHashMap["If_condition:14"] = {rtwname: "<Root>/Out1"};
+	this.rtwnameHashMap["<S1>/Action Port"] = {sid: "If_condition:4"};
+	this.sidHashMap["If_condition:4"] = {rtwname: "<S1>/Action Port"};
+	this.rtwnameHashMap["<S1>/Constant"] = {sid: "If_condition:10"};
+	this.sidHashMap["If_condition:10"] = {rtwname: "<S1>/Constant"};
+	this.rtwnameHashMap["<S1>/Out1"] = {sid: "If_condition:5"};
+	this.sidHashMap["If_condition:5"] = {rtwname: "<S1>/Out1"};
+	this.rtwnameHashMap["<S2>/Action Port"] = {sid: "If_condition:8"};
+	this.sidHashMap["If_condition:8"] = {rtwname: "<S2>/Action Port"};
+	this.rtwnameHashMap["<S2>/Constant"] = {sid: "If_condition:11"};
+	this.sidHashMap["If_condition:11"] = {rtwname: "<S2>/Constant"};
+	this.rtwnameHashMap["<S2>/Out1"] = {sid: "If_condition:9"};
+	this.sidHashMap["If_condition:9"] = {rtwname: "<S2>/Out1"};
+	this.getSID = function(rtwname) { return this.rtwnameHashMap[rtwname];}
+	this.getRtwname = function(sid) { return this.sidHashMap[sid];}
+}
+RTW_rtwnameSIDMap.instance = new RTW_rtwnameSIDMap();
